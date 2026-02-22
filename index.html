@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Júlio César Siqueira - Senior Software Engineer</title>
     <style>
-        /* Base Styles for a clean, modern look without external dependencies */
+        /* Base Styles */
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
@@ -15,7 +15,7 @@
             padding: 2rem;
             background-color: #fdfdfd;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: #111;
         }
         h1 {
@@ -38,6 +38,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
+        
         /* Lists */
         ul {
             padding-left: 1.5rem;
@@ -45,12 +46,51 @@
         li {
             margin-bottom: 0.5rem;
         }
+
+        /* Featured Project */
+        .featured-project {
+            background: #f8fbff;
+            border: 1px solid #cce0ff;
+            border-left: 4px solid #0366d6;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .featured-project h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #0366d6;
+        }
+        .featured-project ul {
+            margin-bottom: 1.5rem;
+        }
+        .repo-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .repo-links a {
+            background: #ffffff;
+            border: 1px solid #d1d5da;
+            color: #24292e;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .repo-links a:hover {
+            background: #f3f4f6;
+            text-decoration: none;
+        }
+
         /* Project Grid */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 1.5rem;
         }
         .project-card {
             border: 1px solid #eaeaea;
@@ -63,9 +103,10 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-        .project-card h3 {
+        .project-card h4 {
             margin-top: 0;
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         .project-card a {
             text-decoration: none;
@@ -122,45 +163,58 @@
         </section>
 
         <section id="projects">
-            <h2>Open Source Projects</h2>
-            <div class="project-grid">
+            <h2>Featured Architecture & Projects</h2>
+            
+            <div class="featured-project">
+                <h3>SpringStore</h3>
                 
-                <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/springstore" target="_blank">springstore</a></h3>
-                    <p>E-commerce API base made with Spring Boot and Spring modules.</p>
-                    <span class="tag">Java</span>
+                
+                
+                <p>A comprehensive, distributed e-commerce backend built with Java 17 and Spring Boot, designed to demonstrate scalable microservice patterns.</p>
+                <ul>
+                    <li><strong>Distributed Architecture:</strong> Engineered a decoupled system utilizing Eureka for service discovery to ensure high availability.</li>
+                    <li><strong>Asynchronous Messaging:</strong> Implemented a high-volume transactional notification system using RabbitMQ and Gmail SMTP.</li>
+                    <li><strong>Identity & Security:</strong> Designed a secure JWT-based authentication layer with granular permissions for three distinct user personas, ensuring strict data isolation.</li>
+                    <li><strong>Complex Business Logic:</strong> Developed a scalable cart-to-order workflow featuring inventory snapshotting (capturing actual price at the time of order) and automated cart state management.</li>
+                </ul>
+                <div class="repo-links">
+                    <a href="https://github.com/cesarsicas/springstore" target="_blank">📦 Main API</a>
+                    <a href="https://github.com/cesarsicas/springstore-payment-service" target="_blank">💳 Payment Service</a>
+                    <a href="https://github.com/cesarsicas/springstore-email-service" target="_blank">📧 Email Service</a>
+                    <a href="https://github.com/cesarsicas/springstore-service-discovery" target="_blank">🔍 Service Discovery</a>
                 </div>
+            </div>
 
+            <div class="project-grid">
                 <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/dogs-jetpack" target="_blank">dogs-jetpack</a></h3>
+                    <h4><a href="https://github.com/cesarsicas/dogs-jetpack" target="_blank">dogs-jetpack</a></h4>
                     <p>Consumes public dog API using best Android practices like MVVM and JetPack.</p>
                     <span class="tag">Kotlin</span>
                 </div>
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/flutter-valorant" target="_blank">flutter-valorant</a></h3>
+                    <h4><a href="https://github.com/cesarsicas/flutter-valorant" target="_blank">flutter-valorant</a></h4>
                     <p>Flutter project that consumes the Valorant API.</p>
                     <span class="tag">Dart</span>
                 </div>
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/flutter_marvel" target="_blank">flutter_marvel</a></h3>
+                    <h4><a href="https://github.com/cesarsicas/flutter_marvel" target="_blank">flutter_marvel</a></h4>
                     <p>Infinite scroll application calling the Marvel API with Flutter and Dio.</p>
                     <span class="tag">Dart</span>
                 </div>
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/ios-comicvine" target="_blank">ios-comicvine</a></h3>
+                    <h4><a href="https://github.com/cesarsicas/ios-comicvine" target="_blank">ios-comicvine</a></h4>
                     <p>iOS client for Comic Vine utilizing SwiftUI and MVVM architecture.</p>
                     <span class="tag">Swift</span>
                 </div>
 
                 <div class="project-card">
-                    <h3><a href="https://github.com/cesarsicas/beacon-hot-or-cold" target="_blank">beacon-hot-or-cold</a></h3>
+                    <h4><a href="https://github.com/cesarsicas/beacon-hot-or-cold" target="_blank">beacon-hot-or-cold</a></h4>
                     <p>An Android Beacon Scanner application.</p>
                     <span class="tag">Java</span>
                 </div>
-
             </div>
         </section>
     </div>
