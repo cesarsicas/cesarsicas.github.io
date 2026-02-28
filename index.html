@@ -30,7 +30,21 @@
         .subtitle {
             font-size: 1.2rem;
             color: #555;
+            margin-bottom: 0.75rem;
+        }
+        .profile-links {
+            display: flex;
+            gap: 1rem;
             margin-bottom: 2rem;
+        }
+        .profile-links a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .profile-links a:hover {
+            text-decoration: underline;
         }
         .container {
             background: #fff;
@@ -133,6 +147,10 @@
         <header>
             <h1>Júlio César Siqueira</h1>
             <div class="subtitle">@cesarsicas | Senior Software Engineer & Product Engineer</div>
+            <div class="profile-links">
+                <a href="http://linkedin.com/in/cesarsicas" target="_blank">LinkedIn</a>
+                <a href="https://github.com/cesarsicas" target="_blank">GitHub</a>
+            </div>
         </header>
 
         <section id="about">
@@ -199,34 +217,38 @@
                 </div>
             </div>
 
+        </section>
+
+        <section id="mobile-projects">
+            <h2>Mobile Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h4><a href="https://github.com/cesarsicas/dogs-jetpack" target="_blank">dogs-jetpack</a></h4>
-                    <p>Consumes public dog API using best Android practices like MVVM and JetPack.</p>
+                    <p>Android app consuming a public dog API, built with MVVM and Jetpack components.</p>
                     <span class="tag">Kotlin</span>
                 </div>
 
                 <div class="project-card">
                     <h4><a href="https://github.com/cesarsicas/flutter-valorant" target="_blank">flutter-valorant</a></h4>
-                    <p>Flutter project that consumes the Valorant API.</p>
+                    <p>Flutter app that displays agents, weapons, and maps from the Valorant API.</p>
                     <span class="tag">Dart</span>
                 </div>
 
                 <div class="project-card">
                     <h4><a href="https://github.com/cesarsicas/flutter_marvel" target="_blank">flutter_marvel</a></h4>
-                    <p>Infinite scroll application calling the Marvel API with Flutter and Dio.</p>
+                    <p>Infinite-scroll Flutter app browsing Marvel characters via the official API using Dio.</p>
                     <span class="tag">Dart</span>
                 </div>
 
                 <div class="project-card">
                     <h4><a href="https://github.com/cesarsicas/ios-comicvine" target="_blank">ios-comicvine</a></h4>
-                    <p>iOS client for Comic Vine utilizing SwiftUI and MVVM architecture.</p>
+                    <p>iOS client for the Comic Vine database, built with SwiftUI and MVVM.</p>
                     <span class="tag">Swift</span>
                 </div>
 
                 <div class="project-card">
                     <h4><a href="https://github.com/cesarsicas/beacon-hot-or-cold" target="_blank">beacon-hot-or-cold</a></h4>
-                    <p>An Android Beacon Scanner application.</p>
+                    <p>Android BLE beacon scanner that plays a hot-or-cold proximity game.</p>
                     <span class="tag">Java</span>
                 </div>
             </div>
